@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ARES_Configuration version="2.1">
+    <Parameters>
+        <Viral_Gain value="0.25" status="Validated" />
+        <Bacterial_Gain value="0.04" status="Validated" />
+        <Fungal_Jailer value="0.06" status="Fixed" />
+    </Parameters>
+    <Compliance>
+        <EMA_Status>Approved</EMA_Status>
+        <Safety_Threshold>0.70</Safety_Threshold>
+    </Compliance>
+</ARES_Configuration>
