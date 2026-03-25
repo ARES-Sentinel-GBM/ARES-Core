@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  gbm-pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ares-gbm-pipeline
+    image: ares-sentinel-gbm:2.1
+    volumes:
+      # Output persistente sull'host
+      - ./output:/app/output:rw
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MPLBACKEND=Agg
+    restart: "no"
+    # Risorse limitate: pipeline scientifica, non web server
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "2.0"
