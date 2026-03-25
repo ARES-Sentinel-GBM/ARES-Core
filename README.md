@@ -1,18 +1,39 @@
-# 🛡️ ARES-Sentinel-GBM (v2.1 PRO)
-## Production-Ready Synthetic Ecosystem
+# 🧬 ARES — AI Therapy Engine
 
-**ARES v2.1** is the final optimized version of the GBM sentinel, validated through High-Throughput Screening and EMA compliance testing.
+ARES is an AI-driven platform for cancer therapy optimization.
 
-### 💎 Gold Standard Configuration
-- **V-Gain:** 0.25 (Maximum Viral Efficacy)
-- **B-Gain:** 0.04 (Optimized Bacterial Competition)
-- **Validation:** Parameters cross-checked via XML interoperability layer.
+It combines:
 
-### 📊 Validation Matrix
-The system has been stress-tested across 9 different evolutionary trajectories.
-![Screening Results](assets/screening_results.png)
+- Tumor dynamic modeling (ODE systems)
+- Adaptive therapy (control theory)
+- Reinforcement learning (policy optimization)
+- Molecular simulation pipelines
 
-### 📂 Structure
-- `/src`: Production-grade simulation logic.
-- `/config`: XML validation and parameter schemas.
-- `/assets`: Experimental evidence and plots.
+---
+
+## 🚨 The Problem
+
+Cancer therapy fails due to **tumor evolution and resistance**.
+
+Static treatment strategies lead to:
+- relapse
+- drug resistance
+- inefficiency
+
+---
+
+## 💡 The Solution
+
+ARES models cancer as a **dynamic system** and applies AI to:
+
+👉 learn optimal therapy strategies over time
+
+Instead of trying to eliminate tumors, ARES focuses on:
+
+- controlling tumor growth
+- managing resistance
+- optimizing treatment schedules
+
+---
+
+## ⚙️ Architecture
