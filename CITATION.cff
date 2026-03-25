@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Linkq1-crypto"
+  given-names: "ARES Sentinel Creator"
+title: "ARES-Sentinel-GBM: An Engineered Synthetic Ecosystem for Glioblastoma Eradication"
+version: 2.1-PRO
+date-released: 2026-03-25
+url: "https://github.com/ARES-Sentinel-GBM/ARES-Core"
