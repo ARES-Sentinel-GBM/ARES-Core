@@ -1,1 +1,48 @@
+import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
 
+from engine.simulate import simulate_static, simulate_adaptive, simulate_rl
+
+st.set_page_config(page_title="ARES AI Therapy Engine", layout="wide")
+
+st.title("ARES - AI Therapy Engine")
+st.write("Real simulation powered by engine module")
+
+# Sidebar
+st.sidebar.header("Model Parameters")
+
+params = {
+    "r": st.sidebar.slider("Growth rate (sens)", 0.1, 1.0, 0.3),
+    "r_res": st.sidebar.slider("Growth rate (res)", 0.1, 1.0, 0.2),
+    "K": st.sidebar.slider("Carrying capacity", 0.5, 2.0, 1.0),
+}
+
+# Simulazione
+t = np.linspace(0, 100, 200)
+
+tumor_static = simulate_static(params, t)
+tumor_adaptive = simulate_adaptive(params, t)
+tumor_rl = simulate_rl(params, t)
+
+# Plot
+fig, ax = plt.subplots(figsize=(10,5))
+
+ax.plot(t, tumor_static, label="Static Therapy", linestyle="--")
+ax.plot(t, tumor_adaptive, label="Adaptive Therapy", linewidth=2)
+ax.plot(t, tumor_rl, label="RL Therapy", linewidth=3)
+
+ax.set_title("Tumor Dynamics (Engine Simulation)")
+ax.set_xlabel("Time")
+ax.set_ylabel("Tumor Size")
+ax.legend()
+
+st.pyplot(fig)
+
+st.markdown("### Key Insight")
+
+st.success("""
+- Static therapy leads to relapse
+- Adaptive therapy stabilizes tumor
+- RL-based control improves outcomes
+""")
